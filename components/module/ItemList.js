@@ -10,12 +10,17 @@ function ItemList({form, setForm}) {
         console.log(products)
     }
 
-    const changeHandler = () => {
-
+    const changeHandler = (e , index) => {
+        const {name, value} = e.target;
+        const newProducts = [...products];
+        newProducts[index][name] = value;
+        setForm({...form, products: newProducts})
     }
 
-    const deleteHandler = () => {
-
+    const deleteHandler = (index) => {
+        const newProducts = [...products];
+        newProducts.splice(index, 1);
+        setForm({...form, products: newProducts})
     }
 
   return (
@@ -23,12 +28,12 @@ function ItemList({form, setForm}) {
         <p>Purchased products</p>
         {products.map((product , index) => (
             <div key={index} className="form-input__list" >
-                <FormInput name="name" label="Product Name" type="text" value={product.name} onChange={changeHandler} />
+                <FormInput name="name" label="Product Name" type="text" value={product.name} onChange={(e)=> changeHandler(e,index) } />
                 <div>
-                <FormInput name="price" label="Price" type="text" value={product.price} onChange={changeHandler} />
-                <FormInput name="qty" label="qty" type="text" value={product.qty} onChange={changeHandler} />
+                <FormInput name="price" label="Price" type="text" value={product.price} onChange={(e)=> changeHandler(e,index) } />
+                <FormInput name="qty" label="qty" type="text" value={product.qty} onChange={(e)=> changeHandler(e,index) } />
                 </div>
-                <button onClick={deleteHandler} >Remove</button>
+                <button onClick={()=> deleteHandler(index)} >Remove</button>
             </div>
         ))}
         <button onClick={addHandler} >Add Item</button>
