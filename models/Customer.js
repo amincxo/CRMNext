@@ -26,11 +26,11 @@ const customerSchema = new Schema({
     },
     createdAt:{
         type: Date,
-        default: ()=> Date.now,
+        default: ()=> Date.now(),
         immutable: true
     },
     updatedAt: {
-        typle: Date,
+        type: Date,
         default: ()=> Date.now(),
     }
 });
