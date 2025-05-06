@@ -7,7 +7,7 @@ function ItemList({form, setForm}) {
         setForm({
             ...form, products: [...products, {name: '', price: '', qty: ""}]
         });
-        console.log(products)
+        console.log(form)
     }
 
     const changeHandler = (e , index) => {
