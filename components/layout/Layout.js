@@ -11,7 +11,7 @@ function Layout({children}) {
             {children}
         </div>
         <footer className="footer" >
-            <a href="aminborvayeh.ir" target="_blank" rel="noreferrer" >aminborvayeh</a> next js cource CRM &copy;
+            <a href="aminborvayeh.ir" target="_blank" rel="noreferrer" >aminborvayeh</a> next js CRM &copy;
         </footer>
     </>
   )
