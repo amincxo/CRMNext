@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import CustomerEditPage from '../../components/template/customerEditPage'
 import { useRouter } from 'next/router';
+import CustomerEditPage from '../../components/template/customerEditPage'
 
 function Index() {
     const [data , setData] = useState(null);
@@ -8,7 +8,7 @@ function Index() {
     const router = useRouter();
     const {query: {customerId} , isReady} = router;
 
-    useEffect(()=>{
+    useEffect(() =>{
         if (isReady) {
             fetch(`/api/customer/${customerId}`).then(res => res.json()).then(data => setData(data.data))
         }

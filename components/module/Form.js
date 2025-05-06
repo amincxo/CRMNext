@@ -2,6 +2,7 @@ import FormInput from "./FormInput"
 import ItemList from "./ItemList"
 
 function Form({form, setForm}) {
+    console.log(form)
     const changeHandler = (e) => {
         const {name , value} = e.target
         setForm({...form, [name]: value })
