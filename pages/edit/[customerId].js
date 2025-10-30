@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router';
-import CustomerEditPage from '../../components/template/customerEditPage'
+import CustomerEditPage from '../../components/template/CustomerEditPage'
 
 function Index() {
     const [data , setData] = useState(null);
