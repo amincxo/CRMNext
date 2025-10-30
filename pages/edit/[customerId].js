@@ -12,7 +12,7 @@ function Index() {
         if (isReady) {
             fetch(`/api/customer/${customerId}`).then(res => res.json()).then(data => setData(data.data))
         }
-    },[isReady])
+    },[isReady, customerId])
     if (data) return <CustomerEditPage data={data} id={customerId} />
     
 }

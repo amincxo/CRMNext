@@ -19,7 +19,7 @@ function Index() {
             .then((data) => setData(data.data))
             fetch
         }
-    },[isReady]);
+    },[isReady ,customerId ]);
 
     if (data)  return <CustomerDetailPage data={data} />
 

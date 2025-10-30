@@ -17,7 +17,7 @@ function CustomerDetailPage({data}) {
 
   return (
     <div className="customer-detail" >
-        <h4>Customer's Details</h4>
+        <h4>Customer&apos;s Details</h4>
         <div className="customer-detail__main" >
             <div className="customer-detail__item" >
                 <span>Name: </span>
